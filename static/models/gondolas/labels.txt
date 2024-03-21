@@ -1,0 +1,2 @@
+0 Espacios en estante
+1 Estante Full
