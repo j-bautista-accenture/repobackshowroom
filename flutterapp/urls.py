@@ -1,6 +1,10 @@
-from django.urls import path
-from .views import *
+from django.urls import path, include
+from rest_framework import routers
+from flutterapp import views
+
+router = routers.DefaultRouter()
+router.register(r'compvision', views.CompVisionFViewSet)
 
 urlpatterns = [
-    path('', CompVisionFViewSet.as_view(), name="home"),
+    path('', include(router.urls))
 ]
